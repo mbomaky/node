@@ -1,9 +1,13 @@
-require('dotenv').config({ quiet: true });
-const path = require('path');
+require("dotenv").config({ quiet: true });
+const path = require("path");
+const http = require("http");
+const PORT = process.env.PORT || 3000;
 
-function main(a, b) {
-    return a + b;
-}
-console.log(main(2, 3));
-console.log('==>', process.env.PORT);
-console.log('path =>', path.join(__dirname, 'ad'));
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end("<h1>Start server</h1>");
+});
+
+server.listen(PORT, () => {
+  console.log(`Listening on ${PORT} 🚀`);
+});

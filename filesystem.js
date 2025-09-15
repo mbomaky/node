@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-fs.mkdir(path.join(__dirname, "testFolder1"), (err) => {
+fs.mkdir(path.join(__dirname, "testFolder2"), (err) => {
   if (err) {
     console.log(err);
     return;
@@ -11,6 +11,7 @@ fs.mkdir(path.join(__dirname, "testFolder1"), (err) => {
 fs.writeFile(path.join(__dirname, "test.txt"), "some data1", (err) => {
   if (err) {
     console.error(err);
+    return;
   }
   console.log("Successfully written");
 });
