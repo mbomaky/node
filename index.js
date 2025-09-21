@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
+import fileUpload from "express-fileupload";
 import router from "./Router.js";
 
 dotenv.config({ quiet: true });
@@ -9,6 +10,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use("/api", router);
+app.use(fileUpload({}));
 
 const startApp = async () => {
   try {
