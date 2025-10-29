@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "express": "^5.1.0",
-    "dotenv": "^17.2.1"
+    "dotenv": "^17.2.1",
+    "mongoose": "^8.19.2"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "cors": "^2.8.5"
   },
   "repository": {
     "type": "git",
